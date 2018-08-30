@@ -1,0 +1,5 @@
+Yonge-University Line(Subway): Vanughan Metropolitian Centre - Highway 407 - Pioneer Village - York University - Finch West - Downsview Parl - Sheppard West - Wilson - Yorkdale - Glencairn - Eglinton West - St Clair West - Spadina - St George - Museum - Queen's Park - St Patrick - Osgoode - St Andrew - Union - King - Queen - Dundas - College - Wellesley - Bloor - Yonge - Rosedale - Summerhill - St Clair - Davisville - Eglinton - Lawrence - York Mills - Sheppard Yonge - North York Centre - Finch;
+Sheppard Line(Subway): Sheppard - Yonge - Bayview - Bessarion - Leslie - Don Mills;
+510(Bus): Union - Richmond - Queen - Dundas - College - Bay - Willcocks - Harbord - Sussex - Spadina;
+Bloor-Danforth Line(Bus): Kipling - Lslington - Royal York - Old Mill - Jane - Runnymede - High Park - Keele - Dundas West - Lansdowne - Dufferin - Ossington - Bathurst - Spadina - St George - Bay - Bloor Yonge - Sherbourne - Castle Frank - BroadView - Chester - Pape - Donloads - GreenWood - Coxwell - Woodbine - Main Street - Victoria Park - Warden - Kennedy;
+506(Bus): High Park - Dundas - College - Ossington - Bathurst - Spadina - St George - Bay Yonge - Ontario Parliament;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EditCardController">
+   <children>
+      <Button layoutX="816.0" layoutY="69.0" mnemonicParsing="false" onAction="#onBuyCard" prefHeight="27.0" prefWidth="134.0" text="Buy A New Card" />
+       <Button layoutX="819.0" layoutY="127.0" mnemonicParsing="false" onAction="#onDeactivate" prefHeight="27.0" text="Deactivate a Card" />
+      <ChoiceBox fx:id="deactivateSelection" layoutX="605.0" layoutY="133.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="activateSelection" layoutX="605.0" layoutY="204.0" prefWidth="150.0" />
+      <Button layoutX="816.0" layoutY="204.0" mnemonicParsing="false" onAction="#onActivate" prefHeight="27.0" prefWidth="134.0" text="Activate a Card" />
+      <Button layoutX="861.0" layoutY="567.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="27.0" prefWidth="89.0" text="Back" />
+      <ChoiceBox fx:id="removeCardSelection" layoutX="605.0" layoutY="280.0" prefHeight="27.0" prefWidth="150.0" />
+      <Button fx:id="removeCard" layoutX="813.0" layoutY="280.0" mnemonicParsing="false" onAction="#onRemoveCard" prefHeight="27.0" prefWidth="134.0" text="Remove Card" />
+      <Button layoutX="717.0" layoutY="567.0" mnemonicParsing="false" onAction="#refresh" prefHeight="27.0" prefWidth="89.0" text="Refresh" />
+      <ChoiceBox fx:id="loadValueSelection" layoutX="605.0" layoutY="348.0" prefWidth="150.0" />
+      <Button layoutX="816.0" layoutY="348.0" mnemonicParsing="false" onAction="#onLoadValue" prefHeight="27.0" prefWidth="134.0" text="Load Value" />
+      <Button layoutX="816.0" layoutY="422.0" mnemonicParsing="false" onAction="#onLoadPass" prefHeight="27.0" prefWidth="134.0" text="Load Transit Pass" />
+      <ChoiceBox fx:id="loadPassSelection" layoutX="605.0" layoutY="428.0" prefWidth="150.0" />
+       <TextArea fx:id="cardStack" layoutX="2.0" prefHeight="762.0" prefWidth="537.0">
+           <padding>
+               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+           </padding>
+       </TextArea>
+   </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DataViewerController">
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="pieChartTab" text="Pie Chart">
+                    <content>
+                        <PieChart fx:id="pieChartGraph" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="792.0">
+                            <padding>
+                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                            </padding>
+                        </PieChart>
+                    </content>
+                </Tab>
+                <Tab fx:id="barGraphTab" text="Bar Graph">
+                    <content>
+                        <BarChart fx:id="barGraph" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="792.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" fx:id="xAxisBarGraph" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="yAxisBarGraph" side="LEFT" />
+                            </yAxis>
+                            <padding>
+                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                            </padding>
+                        </BarChart>
+                    </content>
+                </Tab>
+                <Tab fx:id="infoTab" text="Info">
+                    <content>
+                        <TextArea fx:id="infoTextArea" prefHeight="200.0" prefWidth="200.0">
+                            <padding>
+                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                            </padding>
+                        </TextArea>
+                    </content>
+                </Tab>
+            </tabs>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </TabPane>
+    </center>
+    <left>
+        <VBox spacing="8.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <TitledPane prefHeight="160.0" prefWidth="200.0" text="Select Date Range">
+                    <content>
+                        <VBox prefHeight="140.0" prefWidth="198.0" spacing="8.0">
+                            <children>
+                                <Label text="From: " />
+                                <DatePicker fx:id="datePicker1" />
+                                <Label prefHeight="15.0" prefWidth="192.0" text="To: (Optional)" />
+                                <DatePicker fx:id="datePicker2" />
+                            </children>
+                        </VBox>
+                    </content>
+                </TitledPane>
+                <TitledPane text="Data Selection">
+                    <content>
+                        <VBox prefHeight="130.0" prefWidth="198.0" spacing="8.0">
+                            <children>
+                                <RadioButton fx:id="dailyRevRadioButton" mnemonicParsing="false" onAction="#dataSelectionRadioButtonSelected" text="Daily Revenue">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="dataSelectionToggleGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="monthlyRevRadioButton" mnemonicParsing="false" onAction="#dataSelectionRadioButtonSelected" text="Monthly Revenue" toggleGroup="$dataSelectionToggleGroup" />
+                                <RadioButton fx:id="revenuePerMonthRadioButton" mnemonicParsing="false" onAction="#dataSelectionRadioButtonSelected" prefHeight="18.0" prefWidth="166.0" text="Yearly Revenue Report" toggleGroup="$dataSelectionToggleGroup" />
+                                <RadioButton fx:id="busVsSubwayRadioButton" mnemonicParsing="false" onAction="#dataSelectionRadioButtonSelected" prefHeight="16.0" prefWidth="168.0" text="Traffic Between Dates" toggleGroup="$dataSelectionToggleGroup" />
+                                <RadioButton fx:id="trafficPerMonthRadioButton" mnemonicParsing="false" onAction="#dataSelectionRadioButtonSelected" text="Yearly Traffic Report" toggleGroup = "$dataSelectionToggleGroup"/>
+                            </children>
+                        </VBox>
+                    </content>
+                </TitledPane>
+            </children>
+        </VBox>
+    </left>
+</BorderPane>

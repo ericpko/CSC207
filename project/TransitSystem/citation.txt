@@ -1,0 +1,12 @@
+1. User.SHA256(String plainPassword)
+    Encrypts user's plain password using SHA256 algorithm. Cited from:
+    https://stackoverflow.com/questions/5531455/how-to-hash-some-string-with-sha256-in-java
+
+2. EditCardController.paymentWindow()
+    The code for creating a custom dialog is cited from:
+    https://blog.csdn.net/qq_26954773/article/details/78215554
+    with significant changes.
+
+ 3.DataViewerController.setPieChartData(Label caption)
+    Sets pie chart data:
+    https://docs.oracle.com/javafx/2/charts/pie-chart.htm (Example2-3)

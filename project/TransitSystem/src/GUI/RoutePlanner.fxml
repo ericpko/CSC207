@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RoutePlannerController">
+   <children>
+      <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBack" prefHeight="27.0" prefWidth="87.0" text="Back" />
+      <Label layoutX="532.0" layoutY="119.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+       <MenuButton fx:id="startStationMenu" layoutX="163.0" layoutY="154.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="270.0" text="Choose the start point">
+           <items>
+               <MenuItem mnemonicParsing="false" text="Action 1" />
+               <MenuItem mnemonicParsing="false" text="Action 2" />
+           </items>
+       </MenuButton>
+      <MenuButton fx:id="endStationMenu" layoutX="532.0" layoutY="154.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="270.0" text="Choose the end point">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <Label layoutX="163.0" layoutY="109.0" text="Please select the start point and the end point of your trip:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+       <TextArea fx:id="routeDisplay" layoutX="147.0" layoutY="298.0" prefHeight="280.0" prefWidth="731.0">
+           <padding>
+               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+           </padding>
+       </TextArea>
+       <Label layoutX="258.0" layoutY="220.0" prefHeight="21.0" text="Subway First : " />
+      <ToggleButton fx:id="subwayFirst" layoutX="368.0" layoutY="217.0" mnemonicParsing="false" onAction="#onSubwayFirst" prefHeight="23.0" prefWidth="32.0" />
+      <ToggleButton fx:id="notSubwayFirst" layoutX="400.0" layoutY="217.0" mnemonicParsing="false" onAction="#onNotSubwayFirst" prefHeight="23.0" prefWidth="32.0" />
+      <Button layoutX="163.0" layoutY="217.0" mnemonicParsing="false" onAction="#onView" text="View" />
+   </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</AnchorPane>

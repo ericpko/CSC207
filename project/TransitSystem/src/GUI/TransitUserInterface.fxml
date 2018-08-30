@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TransitUserInterfaceController">
+   <children>
+      <Label fx:id="helloBanner" layoutX="173.0" layoutY="211.0" prefHeight="134.0" prefWidth="592.0">
+         <font>
+            <Font name="AdobeArabic-Regular" size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="changeName" layoutX="794.0" layoutY="318.0" mnemonicParsing="false" onAction="#onChangeName" prefHeight="27.0" prefWidth="132.0" text="Change Name" />
+      <Button fx:id="editCard" layoutX="151.0" layoutY="490.0" mnemonicParsing="false" onAction="#onEditCard" prefHeight="87.0" prefWidth="298.0" text="Manage My Cards">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewTrip" layoutX="579.0" layoutY="490.0" mnemonicParsing="false" onAction="#onViewTrip" prefHeight="87.0" prefWidth="281.0" text="View My Trips">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="signOut" layoutX="885.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSignOut" prefHeight="27.0" prefWidth="107.0" text="Sign Out" />
+   </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</AnchorPane>

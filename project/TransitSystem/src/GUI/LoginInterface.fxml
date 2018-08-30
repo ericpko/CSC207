@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
+   <children>
+      <Button fx:id="loginButton" layoutX="521.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="44.0" prefWidth="235.0" text="LogIn" />
+      <CheckBox fx:id="adminCheckBox" layoutX="631.0" layoutY="408.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="165.0" text="I am an AdminUser" />
+      <Label layoutX="228.0" layoutY="267.0" prefHeight="44.0" prefWidth="147.0" text="User Email" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="410.0" layoutY="276.0" prefHeight="30.0" prefWidth="297.0" />
+      <PasswordField fx:id="password" layoutX="410.0" layoutY="350.0" prefHeight="30.0" prefWidth="297.0" />
+      <Label layoutX="228.0" layoutY="343.0" prefHeight="44.0" prefWidth="147.0" text="Password" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="createAccount" layoutX="228.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleCreateNewAccount" prefHeight="44.0" prefWidth="228.0" text="Create User Account" />
+      <Label layoutX="341.0" layoutY="125.0" prefHeight="70.0" prefWidth="297.0" text="Welcome!">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Button layoutX="193.0" layoutY="23.0" mnemonicParsing="false" onAction="#onGoToTap" prefHeight="30.0" prefWidth="96.0" text="Go to Tap" />
+      <Button layoutX="42.0" layoutY="23.0" mnemonicParsing="false" onAction="#saveAndExit" prefHeight="30.0" prefWidth="96.0" text="Safely Exit" />
+      <Button layoutX="859.0" layoutY="23.0" mnemonicParsing="false" onAction="#onRoutePlanner" prefHeight="30.0" prefWidth="120.0" text="Route Planner" />
+   </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</AnchorPane>

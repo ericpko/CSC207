@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TransitHistoryController">
+   <children>
+      <Button layoutX="918.0" layoutY="35.0" mnemonicParsing="false" onAction="#onBack" prefHeight="27.0" prefWidth="83.0" text="Back" />
+      <ChoiceBox fx:id="cardSelector" layoutX="329.0" layoutY="214.0" prefHeight="27.0" prefWidth="201.0" />
+      <Button layoutX="66.0" layoutY="266.0" mnemonicParsing="false" onAction="#onViewTrip" prefHeight="28.0" prefWidth="187.0" text="View Last Three Trips">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+       <Label layoutX="66.0" layoutY="210.0" prefHeight="34.0" text="Select a Card to view usage:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="587.0" layoutY="266.0" mnemonicParsing="false" onAction="#onViewTransaction" prefHeight="28.0" prefWidth="187.0" text="View Transactions">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <MenuButton fx:id="toMonth" layoutX="272.0" layoutY="155.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" text="Month">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <MenuButton fx:id="toYear" layoutX="144.0" layoutY="155.0" mnemonicParsing="false" text="Choose year">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <MenuButton fx:id="fromMonth" layoutX="272.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="78.0" text="Month">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <MenuButton fx:id="fromYear" layoutX="144.0" layoutY="111.0" mnemonicParsing="false" text="Choose year">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <Button layoutX="493.0" layoutY="123.0" mnemonicParsing="false" onAction="#onGetAverage" prefHeight="44.0" prefWidth="281.0" text="Get My Account Average">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label layoutX="72.0" layoutY="145.0" prefHeight="44.0" prefWidth="57.0" text="To:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="101.0" prefHeight="44.0" prefWidth="57.0" text="From:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+       <TextArea fx:id="tripStack" layoutX="50.0" layoutY="320.0" prefHeight="392.0" prefWidth="443.0">
+           <padding>
+               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+           </padding>
+       </TextArea>
+      <TextArea fx:id="transactionDisplay" layoutX="571.0" layoutY="322.0" prefHeight="408.0" prefWidth="399.0" />
+   </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</AnchorPane>

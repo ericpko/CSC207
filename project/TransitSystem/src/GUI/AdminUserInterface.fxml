@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminUserController">
+  <tabs>
+      <Tab fx:id="paymentConfirmation" text="Payment Confirmation">
+         <content>
+            <AnchorPane>
+               <children>
+                  <Button layoutX="567.0" layoutY="186.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="36.0" prefWidth="298.0" text="Confirm">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="transactionSelection" layoutX="567.0" layoutY="91.0" prefHeight="27.0" prefWidth="298.0" />
+                  <Button layoutX="943.0" layoutY="14.0" mnemonicParsing="false" onAction="#onLogOut" text="Log Out" />
+                  <CheckBox fx:id="declineCheck" layoutX="763.0" layoutY="149.0" mnemonicParsing="false" onAction="#onDeclineCheck" text="Decline" />
+                   <Label layoutX="567.0" layoutY="41.0" prefHeight="36.0" text="Select a pending transaction to approve or decline:" />
+                  <CheckBox fx:id="approveCheck" layoutX="602.0" layoutY="149.0" mnemonicParsing="false" onAction="#onApproveCheck" text="Approve" />
+                  <TextArea fx:id="pendingList" layoutX="-2.0" layoutY="-1.0" prefHeight="738.0" prefWidth="530.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="routeEditor" text="Route Editor">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab fx:id="statistics" text="Statistics">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Change Password">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="924.0" layoutY="24.0" mnemonicParsing="false" onAction="#onLogOut" text="Log Out" />
+                  <Button layoutX="334.0" layoutY="407.0" mnemonicParsing="false" onAction="#onChangePassword" prefHeight="44.0" prefWidth="332.0" text="Change Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <GridPane layoutX="240.0" layoutY="200.0" prefHeight="194.0" prefWidth="532.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="189.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0" minWidth="10.0" prefWidth="343.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="174.0" text="Current Password">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="155.0" text="New Password" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="203.0" text="Re-enter" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="oldPassword" prefHeight="37.0" prefWidth="343.0" GridPane.columnIndex="1" />
+                        <PasswordField fx:id="newPassword" prefHeight="37.0" prefWidth="343.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="reenter" prefHeight="37.0" prefWidth="343.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Change Price">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="48.0" layoutY="81.0" prefHeight="35.0" prefWidth="257.0" text="Current Price informations: ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="priceSelector" layoutX="365.0" layoutY="161.0" prefHeight="27.0" prefWidth="190.0" />
+                  <Label layoutX="365.0" layoutY="118.0" prefHeight="31.0" prefWidth="398.0" text="Select a price category to change price: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="365.0" layoutY="221.0" mnemonicParsing="false" onAction="#onChangePrice" prefHeight="27.0" prefWidth="191.0" text="Change Price" />
+                  <TextArea fx:id="priceInfo" layoutX="48.0" layoutY="134.0" prefHeight="316.0" prefWidth="275.0" />
+                  <Button layoutX="924.0" layoutY="24.0" mnemonicParsing="false" onAction="#onLogOut" text="Log Out" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
